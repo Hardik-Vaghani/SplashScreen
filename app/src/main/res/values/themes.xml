@@ -2,25 +2,23 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@null</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@null</item>
+        <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="s">@null</item>
+        <!-- <item name="android:windowBackground">@android:color/transparent</item>--><!--When you use this here application also transparent-->
     </style>
 
     <style name="Theme.SplashScreen" parent="Base.Theme.SplashScreen" />
     <style name="Theme.SplashScreen.Fullscreen" parent="Theme.SplashScreen">
         <item name="android:actionBarStyle">@style/Widget.Theme.SplashScreen.ActionBar.Fullscreen</item>
         <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBar">true</item>
-<!--    <item name="android:windowBackground">@null</item>-->
+        <item name="android:windowBackground">@null</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowFullscreen">true</item>
-
-        <!-- Splash screen background color -->
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@null</item>
-        <!-- Splash screen logo (optional, or set to @null) -->
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@null</item>
-        <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="s">@null</item>
     </style>
 
     <style name="ThemeOverlay.SplashScreen.FullscreenContainer" parent="">
