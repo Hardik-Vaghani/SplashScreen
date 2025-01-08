@@ -73,8 +73,17 @@ private lateinit var binding: ActivitySplashscreenBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Handle the splash screen as early as possible
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val splashScreen = splashScreen // Access system SplashScreen
+            splashScreen.setOnExitAnimationListener { splashScreenView ->
+                splashScreenView.remove() // Instantly remove the splash
+            }
+        }
+
         super.onCreate(savedInstanceState)
 
+        // Inflate custom layout
         binding = ActivitySplashscreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
