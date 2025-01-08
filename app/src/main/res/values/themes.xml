@@ -3,22 +3,28 @@
     <style name="Base.Theme.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
+        <!-- Disable Android 12+ splash screen -->
         <item name="android:windowSplashScreenBackground" tools:targetApi="s">@null</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@null</item>
         <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="s">@null</item>
+
+        <!-- General Window Configurations -->
         <!-- <item name="android:windowBackground">@android:color/transparent</item>--><!--When you use this here application also transparent-->
+        <!-- <item name="android:windowBackground">@null</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- ActionBar Configurations -->
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/Widget.Theme.SplashScreen.ActionBar.Fullscreen</item>
+
     </style>
 
     <style name="Theme.SplashScreen" parent="Base.Theme.SplashScreen" />
-    <style name="Theme.SplashScreen.Fullscreen" parent="Theme.SplashScreen">
-        <item name="android:actionBarStyle">@style/Widget.Theme.SplashScreen.ActionBar.Fullscreen</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowActionBar">true</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowFullscreen">true</item>
+    <style name="Theme.SplashScreen.Fullscreen" parent="Theme.Material3.DayNight.NoActionBar">
     </style>
 
     <style name="ThemeOverlay.SplashScreen.FullscreenContainer" parent="">
